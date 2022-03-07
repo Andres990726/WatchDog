@@ -37,4 +37,9 @@ public class ReportController {
 		
 		return ResponseEntity.ok(reportService.returnReports());
 	}
+	@GetMapping(value="/findReport/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Object> findReport(@PathVariable("id") int id){
+		return ResponseEntity.ok(reportService.findReport(id));
+	}
+	
 }

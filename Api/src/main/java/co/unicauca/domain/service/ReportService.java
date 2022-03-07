@@ -19,7 +19,7 @@ public class ReportService implements IReportService{
 
 	@Override
 	public void saveReport(Object report) {
-
+	
 		reportDAO.save(MHelpers.modelMapper().map(report, Report.class));
 	}
 
@@ -50,5 +50,10 @@ public class ReportService implements IReportService{
 	public List<Report> groupReports(String address) {
 		
 		return reportDAO.findByAddress(address);
+	}
+	@Override
+	public Report findReport(int id) {
+		Optional<Report> report= reportDAO.findById(id);
+		return report.get();
 	}
 }
