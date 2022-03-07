@@ -17,4 +17,5 @@ public interface IReportService {
 	
 	public void updateStatus(int id, String status);
 	public List<Report> groupReports(String address);
+	public Report findReport(int id);
 }

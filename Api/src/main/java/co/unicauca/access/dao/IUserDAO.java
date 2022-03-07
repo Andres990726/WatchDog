@@ -12,5 +12,5 @@ import co.unicauca.domain.model.User;
 public interface IUserDAO extends CrudRepository<User, Integer> {
 
 	@Transactional(readOnly=true)
-	public Optional<User> findByUsername(String username);
+	public Optional<User> findByEmail(String email);
 }

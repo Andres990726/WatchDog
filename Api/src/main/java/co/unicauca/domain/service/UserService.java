@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import co.unicauca.access.dao.IUserDAO;
+import co.unicauca.domain.dto.CredentialDTO;
 import co.unicauca.domain.dto.UserDTO;
 import co.unicauca.domain.model.User;
 import co.unicauca.utilities.MHelpers;
@@ -32,16 +33,21 @@ public class UserService implements IUserService{
 	}
 
 	@Override
-	public boolean verifyUser(String username, String password) {
-		boolean flag=false;
-		Optional<User> user = userDAO.findByUsername(username);
+	public UserDTO verifyUser(Object credential) throws Exception {
+		UserDTO us= new UserDTO();
+		CredentialDTO objCredential= MHelpers.modelMapper().map(credential, CredentialDTO.class);
+		Optional<User> user = userDAO.findByEmail(objCredential.getEmail());
+		System.out.println(user.get().getEmail());
 		if(user.isPresent()) {
-			if(user.get().getPassword().equals(password))
-				flag=true;
+			if(user.get().getPassword().equals(objCredential.getPassword())) {
+				us= MHelpers.modelMapper().map(user.get(), UserDTO.class);
+				System.out.println(us.getRole());
+				return us;
+			}
 		}
 			
 		
-		return flag;
+		throw new Exception();
 	}
 
 	
@@ -75,4 +81,7 @@ public class UserService implements IUserService{
 		Optional<User> user= userDAO.findById(id);
 		return MHelpers.modelMapper().map(user.get(), UserDTO.class);
 	}
+	
+	
+	
 }
