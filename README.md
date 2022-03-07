@@ -18,7 +18,7 @@ los cuales serán atendidos or funcionarios y si comunicara el estado de estos a
 
 ## 1. Diagrama de Modulos
 <div align="left">
-    <img src="/Model/UML/diagramModulos.jpg" width="600px"</img> 
+    <img src="/Model/C4/diagramModulos.jpg" width="600px"</img> 
 </div>
 
 ## 2. Diagrama de Contexto
