@@ -6,15 +6,10 @@ import { useRoute } from "wouter";
 const Report = () => {
   const [match, params] = useRoute("/homeAdmin/reports/:id");
   const [rep, setRep] = useState();
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:5002/report/findReport/${params.id}`, null)
-      .then((report) => setRep(report.data));
-  }, []);
-
+ 
   return (
-    <Container>
+    
+    <Container className="mt-5">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -28,43 +23,43 @@ const Report = () => {
           <tr>
             <td>1</td>
             <td>Codigo reporte</td>
-            <td>{rep.id}</td>
+            <td>123</td>
            
           </tr>
           <tr>
             <td>2</td>
             <td>Identificación del denunciante</td>
-            <td>{rep.cod_id}</td>
+            <td>{123}</td>
          
           </tr>
           <tr>
             <td>3</td>
             <td>Ciudad</td>
-            <td>{rep.city}</td>
+            <td>city</td>
           </tr>
 
           <tr>
             <td>4</td>
             <td>Dirección</td>
-            <td>{rep.address}</td>
+            <td>cra 2</td>
           </tr>
 
           <tr>
             <td>5</td>
             <td>Tipo de denuncia</td>
-            <td>{rep.type}</td>
+            <td>cra3</td>
           </tr>
 
           <tr>
             <td>6</td>
             <td>Descripción</td>
-            <td>{rep.description}</td>
+            <td>obvio</td>
           </tr>
 
           <tr>
             <td>7</td>
             <td>Estado</td>
-            <td>{rep.status}</td>
+            <td>bien</td>
           </tr>
         </tbody>
       </Table>

@@ -3,7 +3,8 @@ import { Route } from "wouter";
 import HomePage from "./pages/HomePage";
 import IndexPage from "./pages/IndexPage";
 import HomeAdminPage from "./pages/HomeAdminPage";
-import Report from "./pages/Reports"
+import Report from "./pages/Reports";
+import UserPage from "./pages/UserPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" component={HomePage} />
         <Route path="/homeAdmin" component={HomeAdminPage} />
         <Route path="/homeAdmin/reports/:id" component={Report} />
+        <Route path="/addUser" component={UserPage}/>
       </Switch>
     </div>
   );

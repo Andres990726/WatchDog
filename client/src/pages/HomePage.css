@@ -1,0 +1,25 @@
+
+img.report-img {
+    width: 500px;
+    height: 350px;
+    margin-bottom: 2rem;
+    margin-left: 10%;
+}
+h1.text-center {
+    margin-top: 4;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #6C63FF;
+    border-color: #6C63FF;
+}
+button.btn.btn-primary {
+    color: #fff;
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+}
+p.text-right {
+    text-align: justify;
+    margin-bottom: 3rem;
+    margin-left: 10%;
+}

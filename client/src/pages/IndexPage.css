@@ -1,0 +1,25 @@
+.btn-primary{
+    color: #fff;
+    background-color: #813AFE;
+    border-color: #813AFE;
+}
+.icon-img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 2rem;
+}
+img.user-img {
+    width: 700px;
+    height: 500px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+button.btn.btn-primary.btn-lg {
+    color: #fff;
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+}
+.reset{
+    color: black;
+}

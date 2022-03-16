@@ -1,0 +1,14 @@
+h1.text-center {
+    margin-top: 2;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #6C63FF;
+    border-color: #6C63FF;
+}
+img.register-img {
+    width: 700px;
+    height: 350px;
+    margin-bottom: 2rem;
+    margin-top: 30%;
+}
