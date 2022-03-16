@@ -16,6 +16,6 @@ public interface IUserService {
 	public UserDTO findUser(int id);
 	public void updateUser(Object user);
 	public void deleteUser(int id);
-	public void addUser(Object user);
+	public boolean addUser(Object user) throws Exception;
 	
 }
