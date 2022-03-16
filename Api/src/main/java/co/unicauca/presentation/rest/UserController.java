@@ -21,8 +21,8 @@ public class UserController {
 	private IUserService userService;
 	
 	@PostMapping("/addUser")
-	public void addUser(@RequestBody Object user) {
-		userService.addUser(user);
+	public boolean addUser(@RequestBody Object user) throws Exception {
+		return userService.addUser(user);
 	}
 	
 	@GetMapping(value = "/returnAll", produces = MediaType.APPLICATION_JSON_VALUE)

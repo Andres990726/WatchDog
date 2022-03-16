@@ -53,7 +53,10 @@ public class ReportService implements IReportService{
 	}
 	@Override
 	public Report findReport(int id) {
+		System.out.println("id: "+id);
 		Optional<Report> report= reportDAO.findById(id);
-		return report.get();
+		Report reporte= report.get();
+		System.out.println(reporte.getAddress());
+		return reporte;
 	}
 }

@@ -58,9 +58,13 @@ public class UserService implements IUserService{
 	}
 
 	@Override
-	public void addUser(Object user) {
+	public boolean addUser(Object user) throws Exception{
 
-		userDAO.save(MHelpers.modelMapper().map(user, User.class));
+		User user3 = userDAO.save(MHelpers.modelMapper().map(user, User.class));
+		if(user3 !=null)
+			return true;
+	
+	throw new Exception();
 	}
 	public void updateUser(Object user) {
 		User userAux=MHelpers.modelMapper().map(user, User.class);
