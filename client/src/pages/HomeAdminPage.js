@@ -18,7 +18,7 @@ const HomeAdminPage = () => {
   
 
   return (
-    <Container>
+    <Container className="mt-5">
       {r.map((rep) => (
         <ListGroup defaultActiveKey="#link1">
           <ListGroup.Item action >
@@ -27,7 +27,9 @@ const HomeAdminPage = () => {
                 className="fw-bold text-decoration-none" 
                 to={`/homeAdmin/reports/${rep.id}`}
               >
+                <div className="fw-bold">
                 Informe {rep.id}
+                </div>
               </Link>
                 ubicado en {rep.address}
             </div>
